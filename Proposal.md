@@ -2,7 +2,7 @@
 
 ### Project Proposal 
 
-- CurbIT is an app that lets you furnish your New York home with unique street finds. It allows you to track in real time the locations of furniture items spotted and posted by other CurbIT users. Discover hidden treasures, reduce waste, and give new life to forgotten furniture items with CurbIT. Join the community today and turn your search for home furnishings into an exciting treasure hunt. 
+- CurbIT is an app that lets you furnish your New York home with unique street finds. It allows you to track in real time the locations of furniture listings spotted and posted by other CurbIT users. Discover hidden treasures, reduce waste, and give new life to forgotten furniture items with CurbIT. Join the community today and turn your search for home furnishings into an exciting treasure hunt. 
 
 ### Project name and description 
 
@@ -25,29 +25,31 @@ Key Features:
 CurbIT revolutionizes the way New Yorkers furnish their homes by transforming the city's streets into an ever-changing free marketplace. Discover hidden treasures, reduce waste, and give new life to forgotten furniture items with CurbIT.
 
 
-### Images 
+### Images and Links 
 
 ![image](/images/CurbIt.jpg)
 
+[App-images](https://www.figma.com/file/rDLvyLAoH7DttcpLsIsWLx/CurbIT?type=design&node-id=0%3A1&t=cslDqOVpSwEX52QD-1)
 
+[Notion-board](https://malachite-silene-cb6.notion.site/Week-9-Project-Week-a0b92a5788c34333a9022bd2661a53d5?pvs=4) 
 
 ### Routes
 
-- GET  ( /items )  Fetches all items available 
+- GET  ( /listings )  Fetches all items available 
 
-- GET  ( /items/:type )  Fetches items by type (chair, table, fan)
+- GET  ( /listings/:type )  Fetches items by type (chair, table, fan)
 
-- GET  ( /items/:type/:style )  Fetches a item by style (dining table, coffee table, etc)
+- GET  ( /listings/:type/:style )  Fetches a item by style (dining table, coffee table, etc)
 
-- GET  ( /items/:type/:style/:id )	Fetches a specific item by id 
+- GET  ( /listings/:type/:style/:id )	Fetches a specific item by id 
 
-- POST ( /items )	Allows you to post an item 
+- POST ( /listings )	Allows you to post an item 
 
-- POST ( /items/:type/:style )	Allows you to post an item by style
+- POST ( /listings/:type/:style )	Allows you to post an item by style
 
-- PUT  ( /items/:type/:style/:id )	Allows you to update a different item by Id 
+- PUT  ( /listings/:type/:style/:id )	Allows you to update a different item by Id 
 
-- DELETE  ( /items/:type/:style/:id )	Allows you to delete an item by Id
+- DELETE  ( /listings/:type/:style/:id )	Allows you to delete an item by Id
 
 
 ### Models 
@@ -56,32 +58,32 @@ CurbIT revolutionizes the way New Yorkers furnish their homes by transforming th
 
 ### User Stories 
 
-- As a user I should be able to query ('/items) to grab all items available and their location
+- As a user I should be able to query ('/listings) to grab all listings available and their location
 
-- As a user I should be able to query ( '/items/:type ) to grabs items specified to different categories like Chairs, and tables 
+- As a user I should be able to query ( '/listings/:type ) to grabs listings specified to different categories like Chairs, and tables 
 
-- As a user I should be able to query ( '/items/:type/:style ) to grab specified item subcategories in a category like chairs. Ex (Lawn, rocking, office)
+- As a user I should be able to query ( '/listings/:type/:style ) to grab specified listing subcategories in a category like chairs. Ex (Lawn, rocking, office)
 
 ### MVP Goals
 
--  I want to be able to use real-Time Item Tracking using a live map which displays available items and their location. using the Get ( /items ) route
+-  I want to be able to use real-Time Item Tracking using a live map which displays available listings and their location. using the Get ( /listings ) route
 
 - I want to be able to upload information about an item and its location 
 
 - I want a user to be able click a "claimed" button indicating the item is no longer available. If claimed button is active for 24 hours Post will auto Delete 
 
-- I want to be able to update information on a post like whether its been claimed or the description is incorrect using the ( '/items/:type/:style/:id) PUT route 
+- I want to be able to update information on a post like whether its been claimed or the description is incorrect using the ( '/listings/:type/:style/:id) PUT route 
 
 - I want to be able to have a button that if the user claims an item can be declared as such 
 
-- I want to be able to delete a post using the ( '/items/:type/:style/:id' ) Delete route 
+- I want to be able to delete a post using the ( '/listings/:type/:style/:id' ) Delete route 
 
 ### Stretch Goals 
 
 - If current user claims an item I want to be able to have the map populate with places to clean the item.  
 
-- I want to be able to allow users to comment on posts to further gather information regarding items 
+- I want to be able to allow users to comment on posts to further gather information regarding listings 
 
 - I want to be able to allows users to save their favorite items and be alerted when new items fitting their preferences are posted 
 
-- I want to be able to upload photos of items seen using the Post ( /items) route 
+- I want to be able to upload photos of items seen using the Post ( /listings) route 
