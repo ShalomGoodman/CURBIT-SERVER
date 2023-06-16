@@ -29,6 +29,8 @@ CurbIT revolutionizes the way New Yorkers furnish their homes by transforming th
 
 ![image](/images/CurbIt.jpg)
 
+![image](/images/IMG_17487F37F8FC-1.jpg)
+
 [App-images](https://www.figma.com/file/rDLvyLAoH7DttcpLsIsWLx/CurbIT?type=design&node-id=0%3A1&t=cslDqOVpSwEX52QD-1)
 
 [Notion-board](https://malachite-silene-cb6.notion.site/Week-9-Project-Week-a0b92a5788c34333a9022bd2661a53d5?pvs=4) 
@@ -37,20 +39,27 @@ CurbIT revolutionizes the way New Yorkers furnish their homes by transforming th
 
 - GET  ( /listings )  Fetches all items available 
 
-- GET  ( /listings/:type )  Fetches items by type (chair, table, fan)
+- GET  ( /listings/:category )  Fetches items by type (chair, table, fan)
 
-- GET  ( /listings/:type/:style )  Fetches a item by style (dining table, coffee table, etc)
+- GET  ( /categories )
 
-- GET  ( /listings/:type/:style/:id )	Fetches a specific item by id 
+- Get  ( /categories/styles/:category )
+
+- GET  ( /listings/:category/:style/:id )	Fetches a specific item by id 
 
 - POST ( /listings )	Allows you to post an item 
 
-- POST ( /listings/:type/:style )	Allows you to post an item by style
+- PUT  ( /listings/:category/:style/:id )	Allows you to update a different item by Id 
 
-- PUT  ( /listings/:type/:style/:id )	Allows you to update a different item by Id 
+- DELETE  ( /listings/:category/:style/:id )	Allows you to delete an item by Id
 
-- DELETE  ( /listings/:type/:style/:id )	Allows you to delete an item by Id
+- POST  ( /signin) Allows user to sign into webpage 
 
+- POST ( /signup ) Allows user to signup for webpage 
+
+- GET ( /isTokenValid ) checks if token is valid 
+
+- GET ( /user ) Get 
 
 ### Models 
 
@@ -60,9 +69,9 @@ CurbIT revolutionizes the way New Yorkers furnish their homes by transforming th
 
 - As a user I should be able to query ('/listings) to grab all listings available and their location
 
-- As a user I should be able to query ( '/listings/:type ) to grabs listings specified to different categories like Chairs, and tables 
+- As a user I should be able to query ( '/listings/:category ) to grabs listings specified to different categories like Chairs, and tables 
 
-- As a user I should be able to query ( '/listings/:type/:style ) to grab specified listing subcategories in a category like chairs. Ex (Lawn, rocking, office)
+- As a user I should be able to query ( '/listings/:category/:style ) to grab specified listing subcategories in a category like chairs. Ex (Lawn, rocking, office)
 
 ### MVP Goals
 
@@ -76,7 +85,7 @@ CurbIT revolutionizes the way New Yorkers furnish their homes by transforming th
 
 - I want to be able to have a button that if the user claims an item can be declared as such 
 
-- I want to be able to delete a post using the ( '/listings/:type/:style/:id' ) Delete route 
+- I want to be able to delete a post using the ( '/listings/:category/:style/:id' ) Delete route 
 
 ### Stretch Goals 
 
