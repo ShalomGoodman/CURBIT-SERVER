@@ -39,27 +39,25 @@ CurbIT revolutionizes the way New Yorkers furnish their homes by transforming th
 
 - GET  ( /listings )  Fetches all items available 
 
-- GET  ( /listings/:category )  Fetches items by type (chair, table, fan)
+- GET  ( /listings/category/:category )  Fetches items by type (chair, table, fan)
 
-- GET  ( /categories )
+- GET  ( /listings/_:id )	Fetches a specific item by id 
 
-- Get  ( /categories/styles/:category )
+- POST ( /listing )	Allows you to post an item 
 
-- GET  ( /listings/:category/:style/:id )	Fetches a specific item by id 
+- PUT  ( /listings/_:id )	Allows you to update a different item by Id 
 
-- POST ( /listings )	Allows you to post an item 
+- DELETE  ( /listings/_:id )	Allows you to delete an item by Id
 
-- PUT  ( /listings/:category/:style/:id )	Allows you to update a different item by Id 
+- POST  ( /auth/signin) Allows user to sign into webpage 
 
-- DELETE  ( /listings/:category/:style/:id )	Allows you to delete an item by Id
+- POST ( /auth/signup ) Allows user to signup for webpage 
 
-- POST  ( /signin) Allows user to sign into webpage 
+- GET ( /auth/isTokenValid ) checks if token is valid 
 
-- POST ( /signup ) Allows user to signup for webpage 
+- GET ( /categories ) Gets all categories
 
-- GET ( /isTokenValid ) checks if token is valid 
-
-- GET ( /user ) Get 
+-PUT ( /listing/is-claimed/:id ) Shows that listing has been claimed 
 
 ### Models 
 
@@ -96,3 +94,6 @@ CurbIT revolutionizes the way New Yorkers furnish their homes by transforming th
 - I want to be able to allows users to save their favorite items and be alerted when new items fitting their preferences are posted 
 
 - I want to be able to upload photos of items seen using the Post ( /listings) route 
+
+- I want to have users be required to post a picture proving that the item they is actually claimed 
+

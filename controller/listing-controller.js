@@ -1,0 +1,18 @@
+
+
+getAllListings(() => {
+
+})
+
+addListing(() => {
+
+})
+
+updateListing(() => {
+    
+})
+
+removeListing(() => {
+
+})
+

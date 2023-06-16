@@ -4,7 +4,7 @@ import cors from 'cors'
 // import categoryRoutes from './routes/category-routes.js'
 // import listingRoutes from './routes/listing-routes.js'
 // import userRoutes from './routes/user-routes.js'
-// import userloginRoutes from './routes/userlogin-routes.js'
+
 
 
 const app = express()
@@ -21,7 +21,7 @@ dotenv.config()
 let PORT = process.env.PORT || 7500
 
 
-// app.use(categoryRoutes, listingRoutes, userRoutes, userloginRoutes)
+// app.use(categoryRoutes, listingRoutes, userRoutes)
 
 
 app.listen(PORT, () => {
