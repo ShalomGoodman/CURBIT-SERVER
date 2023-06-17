@@ -1,0 +1,3 @@
+DATABASE_URI=mongodb+srv://Jamari02:test@jamari02.m2g83xx.mongodb.net/curb?retryWrites=true&w=majority
+PORT=5550
+ENVIRONMENT=prod
