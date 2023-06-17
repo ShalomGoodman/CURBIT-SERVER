@@ -3,6 +3,7 @@ import * as dotenv from 'dotenv'
 import cors from 'cors'
 import db from './db/connection.js'
 import { listingRoutes } from './routes/listing-routes.js'
+import { userRoutes } from './routes/user-routes.js'
 /*import categoryRoutes from './routes/category-routes.js'
 import listingRoutes from './routes/listing-routes.js'
 import userRoutes from './routes/user-routes.js'
@@ -24,6 +25,7 @@ let PORT = process.env.PORT || 5550
 
 //app.use(categoryRoutes, listingRoutes, userRoutes, userloginRoutes)
 listingRoutes(app);
+userRoutes(app);
 
 
 app.listen(PORT, () => {

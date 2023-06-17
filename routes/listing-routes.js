@@ -53,10 +53,14 @@ app.post('/listing', (req, res) => {
 /*----- Put Routes -----*/
 
 //Finds a Listing by ID and toggles isClaimed to either true or false
-app.put('/listing/is-claimed/:id', (req, res) => {
-    Listing.findOneAndUpdate({_id: req.params.id}, filter)
+app.put('/listing/is-claimed/:id', async (req, res) => {
+    let update;
+    const listing = await Listing.findOne({_id: req.params.id})
+    listing.isClaimed ? update = false : update = true
+
+    Listing.findOneAndUpdate({_id: req.params.id}, {isClaimed: update})
     .then((response) => {
-        res.status(200).send({status: 200, message:"Listing successfully edited"});
+        res.status(200).send({status: 200, message:`Claim Status changed to ${update}`});
     })
     .catch((err) => {
         res.status(404).send({status: 404, error: err});
