@@ -1,0 +1,119 @@
+[
+    {
+      "category": "chair",
+      "icon": "fa fa-chair"
+    },
+    {
+      "category": "sofa",
+      "icon": "fa fa-sofa"
+    },
+    {
+      "category": "bike",
+      "icon": "fa fa-bicycle"
+    },
+    {
+      "category": "table",
+      "icon": "fa fa-table"
+    },
+    {
+      "category": "lamp",
+      "icon": "fa fa-lightbulb-o"
+    },
+    {
+      "category": "book",
+      "icon": "fa fa-book"
+    },
+    {
+      "category": "bed",
+      "icon": "fa fa-bed"
+    },
+    {
+      "category": "television",
+      "icon": "fa fa-tv"
+    },
+    {
+      "category": "guitar",
+      "icon": "fa fa-guitar"
+    },
+    {
+      "category": "clock",
+      "icon": "fa fa-clock-o"
+    },
+    {
+      "category": "paintbrush",
+      "icon": "fa fa-paint-brush"
+    },
+    {
+      "category": "car",
+      "icon": "fa fa-car"
+    },
+    {
+      "category": "phone",
+      "icon": "fa fa-mobile"
+    },
+    {
+      "category": "basketball",
+      "icon": "fa fa-basketball-ball"
+    },
+    {
+      "category": "cutlery",
+      "icon": "fa fa-cutlery"
+    },
+    {
+      "category": "suitcase",
+      "icon": "fa fa-suitcase"
+    },
+    {
+      "category": "camera",
+      "icon": "fa fa-camera"
+    },
+    {
+      "category": "headphones",
+      "icon": "fa fa-headphones"
+    },
+    {
+      "category": "umbrella",
+      "icon": "fa fa-umbrella"
+    },
+    {
+      "category": "desk",
+      "icon": "fa fa-desktop"
+    },
+    {
+      "category": "shoes",
+      "icon": "fa fa-shoe-prints"
+    },
+    {
+      "category": "watch",
+      "icon": "fa fa-watch"
+    },
+    {
+      "category": "bottle",
+      "icon": "fa fa-wine-bottle"
+    },
+    {
+      "category": "camera",
+      "icon": "fa fa-camera-retro"
+    },
+    {
+      "category": "gamepad",
+      "icon": "fa fa-gamepad"
+    },
+    {
+      "category": "music",
+      "icon": "fa fa-music"
+    },
+    {
+      "category": "laptop",
+      "icon": "fa fa-laptop"
+    },
+    {
+      "category": "shirt",
+      "icon": "fa fa-tshirt"
+    },
+    {
+      "category": "glasses",
+      "icon": "fa fa-glasses"
+    }
+]
+  
