@@ -5,7 +5,11 @@ const Schema = mongoose.Schema
 
 const userSchema = new Schema({
     username: { type: String, required: true },
-    listings: { type: Array, required: false },
+	credentials: { type: String, required: true },
+    listings: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Listing'
+    }],
     createdAt: { type: Date, required: true}
 });
 
