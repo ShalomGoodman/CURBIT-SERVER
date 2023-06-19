@@ -6,7 +6,7 @@ export function userRoutes (app, jwt, SECRET) {
 /*----- Post Routes -----*/
 app.post('/auth/signin', async (req, res) => userSignIn(req, res, jwt, SECRET));
 
-//TEST ROUTES//
+//TEST ROUTES Delete Later//
 app.get('/users', (req, res) => {
     User.find({})
     .then((response) => {
