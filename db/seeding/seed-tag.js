@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import Tags from '../../models/tags.js';
-import tags from '../tags.json' assert {type: 'json'};
+import tags from '../../data/tags.json' assert {type: 'json'};
 
 const tagData = tags.tags;
 

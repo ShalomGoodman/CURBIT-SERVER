@@ -32,35 +32,6 @@ userRoutes(app, jwt, bcrypt, SECRET)
 categoryRoutes(app)
 tagRoutes(app)
 
-
-/*----- Testing Auth (Delete Later)-----*/
-async function auth(req, res, next) {
-   if (req.headers.authorization) {
-      const header = req.headers.authorization
-      const token = header.split(' ')[1]
-      const payload = await jwt.verify(token, SECRET)
-      req.user = payload
-      next();
-   } else {
-      res.send("NOT AUTHORIZED")
-   }
-}
-
-const user = {username: "Peter Paker", password: "Spider-Man"}
-app.post('/login', (req, res) => {
-   const {username, password} = req.body
-
-   if (username === user.username && password === user.password) {
-      res.json({token: jwt.sign(user, SECRET)})
-   } else {
-      res.send("Failed")
-   }
-})
-
-app.post('/test', auth, (req, res) => {
-   res.send("Success")
-})
-
 /*----- Server Listening -----*/
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)
