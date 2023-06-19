@@ -10,6 +10,7 @@ import { listingRoutes } from './routes/listing-routes.js'
 import { userRoutes } from './routes/user-routes.js'
 import { categoryRoutes } from './routes/category-routes.js'
 import { tagRoutes } from './routes/tag-routes.js'
+import { authRoutes } from './auth/auth.js'
 
 /*----- Middleware -----*/
 const app = express()
@@ -31,6 +32,7 @@ listingRoutes(app)
 userRoutes(app, jwt, bcrypt, SECRET)
 categoryRoutes(app)
 tagRoutes(app)
+authRoutes(app)
 
 /*----- Server Listening -----*/
 app.listen(PORT, () => {

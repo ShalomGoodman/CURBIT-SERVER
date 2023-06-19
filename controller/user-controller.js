@@ -1,5 +1,12 @@
 import User from '../models/user.js';
 
+// Set token expiration to 30 minutes
+function getExpiration() {
+    const d = new Date()
+    d.setMinutes(d.getMinutes() + 30)
+    return d.getTime()
+}
+
 /*----- Post Request -----*/
 
 //User SignUp
@@ -18,9 +25,9 @@ export async function userSignIn(req, res, jwt, bcrypt, SECRET) {
         const result = await bcrypt.compare(req.body.credentials, user.credentials)
 
         if (result) {
-            const payload = { username: user.username }
+            const payload = { id: user._id, username: user.username, exp: getExpiration() } //<== Added id to payload
             const token = jwt.sign(payload, SECRET)
-            res.cookie('token', token, { httpOnly: true }).json({ message: 'loggin successful', token: token })
+            res.cookie('token', token, { httpOnly: true }).json({ message: 'login successful', token: token })
         } else {
             res.status(400).send({message: "Password is incorrect"})
         }
