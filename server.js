@@ -3,6 +3,7 @@ import express from 'express'
 import * as dotenv from 'dotenv'
 import cors from 'cors'
 import jwt from 'jsonwebtoken'
+import bcrypt from 'bcrypt'
 import db from './db/connection.js'
 /*----- Imported Routes -----*/
 import { listingRoutes } from './routes/listing-routes.js'
@@ -27,7 +28,7 @@ const SECRET = process.env.SECRET
 
 /*----- Routes -----*/
 listingRoutes(app)
-userRoutes(app, jwt, SECRET)
+userRoutes(app, jwt, bcrypt, SECRET)
 categoryRoutes(app)
 tagRoutes(app)
 
