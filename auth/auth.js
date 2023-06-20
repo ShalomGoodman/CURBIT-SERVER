@@ -22,4 +22,9 @@ app.get('/auth/isTokenValid', verifyAuth, async (req, res) => {
     }
 })
 
+//Logging out
+app.get("/auth/signout", async (req, res) => {
+  res.clearCookie("token").json({ response: "You are Logged Out" })
+})
+
 }

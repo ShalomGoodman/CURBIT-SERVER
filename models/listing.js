@@ -11,8 +11,8 @@ const listingSchema = new Schema({
     tags: [{ type: String, required: true }],
     category: { type: String, required: true }, 
     location: { 
-        longitude: { type: String, required: true },
-        latitude: { type: String, required: true }
+        lng: { type: String, required: true },
+        lat: { type: String, required: true }
     },
     isClaimed: { type: Boolean, required: true },
     createdAt: { type: Date, required: true }
