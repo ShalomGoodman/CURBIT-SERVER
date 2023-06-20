@@ -1,10 +1,11 @@
 import Listing from '../models/listing.js';
+import User from '../models/user.js';
 
 /*----- Get Routes -----*/
 
 //Get all Listings
-export function getAllListings(req, res) {
-    Listing.find({})
+export async function getAllListings(req, res) {
+    Listing.find({}).populate('creator')
     .then((response) => {
         res.status(200).send(response);
     })
@@ -15,7 +16,7 @@ export function getAllListings(req, res) {
 
 //Get all Listings by Category
 export function getListingsByCategory(req, res) {
-    Listing.find({category: req.params.category})
+    Listing.find({category: req.params.category}).populate('creator')
     .then((response) => {
         res.status(200).send(response);
     })
@@ -26,7 +27,7 @@ export function getListingsByCategory(req, res) {
 
 //Get Listing by ID
 export function getListingById(req, res) {
-    Listing.findOne({_id: req.params.id})
+    Listing.findOne({_id: req.params.id}).populate('creator')
     .then((response) => {
         res.status(200).send(response);
     })
@@ -38,7 +39,7 @@ export function getListingById(req, res) {
 /*----- Post Routes -----*/
 
 //Add a new Listing to the database
-export function addListing(req, res) {
+export async function addListing(req, res) {
     Listing.create(req.body)
     .then((response) => {
         res.status(200).send({status: 200, message:'New listing added'});

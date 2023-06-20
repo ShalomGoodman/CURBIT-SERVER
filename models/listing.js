@@ -4,8 +4,9 @@ const Schema = mongoose.Schema;
 
 const listingSchema = new Schema({ 
     creator: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+        type: mongoose.Types.ObjectId,
+        ref: 'User',
+        required: true
       },   
     description: { type: String, required: true },
     tags: [{ type: String, required: true }],
