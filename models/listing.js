@@ -16,7 +16,7 @@ const listingSchema = new Schema({
         lat: { type: String, required: true }
     },
     isClaimed: { type: Boolean, required: true },
-    createdAt: { type: Date, required: true }
+    createdAt: { type: Date, default: Date.now }
 })
 
 const Listing = mongoose.model('Listing', listingSchema);

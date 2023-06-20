@@ -10,7 +10,7 @@ const userSchema = new Schema({
         type: mongoose.Types.ObjectId,
         ref: 'Listing'
     }],
-    createdAt: { type: Date, required: true}
+    createdAt: { type: Date, default: Date.now}
 });
 
 const User = mongoose.model('User', userSchema);
