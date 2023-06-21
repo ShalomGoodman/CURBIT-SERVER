@@ -23,13 +23,12 @@ export default async function verifyAuth(req, res, next) {
   try {
     data = jwt.verify(token, SECRET)
   } catch (error) {
-    res.status(400).json({
+    return res.status(400).json({
       valid: false,
       status: 400,
       error: `Token is invalid`,
       database_message: error.message,
     })
-    return;
   }
   // if token is expired send 401 (in the front end make sure the user is re-routed)
   const currentTime = new Date()
@@ -43,6 +42,7 @@ export default async function verifyAuth(req, res, next) {
   else {
     //sends the id needed for the rest of the request, down to the controller
     req.id = data.id
+
     // next() is an express way of calling the next function in the middleware path
     next()
   }
