@@ -14,7 +14,8 @@ export default async function verifyAuth(req, res, next) {
   if (!token) {
     return res.status(401).json({
       status: 401,
-      message: 'You must signin first.'
+      message: 'You must signin first.',
+      valid: false
     }) 
   }
   // verify token and extra the user's info
@@ -35,7 +36,8 @@ export default async function verifyAuth(req, res, next) {
   if (data.exp < currentTime.getTime()) {
     return res.status(401).json({
       status: 401,
-      message: 'Your token has expired, sign in again.'
+      message: 'Your token has expired, sign in again.',
+      valid: false
     }) 
   }
   else {
