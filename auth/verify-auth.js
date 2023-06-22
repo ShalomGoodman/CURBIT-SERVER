@@ -42,6 +42,7 @@ export default async function verifyAuth(req, res, next) {
   else {
     //sends the id needed for the rest of the request, down to the controller
     req.id = data.id
+    req.username = data.username
 
     // next() is an express way of calling the next function in the middleware path
     next()

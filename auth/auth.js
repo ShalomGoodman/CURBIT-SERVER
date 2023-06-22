@@ -9,7 +9,8 @@ app.get('/auth/isTokenValid', verifyAuth, async (req, res) => {
         res.status(200).json({
           valid: true,
           status: 200,
-          message: "Token is valid"
+          message: "Token is valid",
+          username: req.username
         })
       }
     } catch (error) {
