@@ -10,7 +10,8 @@ app.get('/auth/isTokenValid', verifyAuth, async (req, res) => {
           valid: true,
           status: 200,
           message: "Token is valid",
-          username: req.username
+          username: req.username,
+          userId: req.id
         })
       }
     } catch (error) {

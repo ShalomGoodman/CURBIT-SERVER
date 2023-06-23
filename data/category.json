@@ -1,50 +1,50 @@
 [
   {
       "category": "chair",
-      "icon": "fa-thin fa-chair"
+      "icon": "fa-solid fa-chair"
   },
   {
-      "category": "sofa",
-      "icon": "fa-thin fa-couch"
+      "category": "couch",
+      "icon": "fa-solid fa-couch"
   },
   {
       "category": "bed",
-      "icon": "fa-thin fa-bed"
+      "icon": "fa-solid fa-bed"
   },
   {
-      "category": "television",
-      "icon": "fa-thin fa-tv"
+      "category": "tv",
+      "icon": "fa-solid fa-tv"
   },
   {
       "category": "book",
-      "icon": "fa-regular fa-book"
+      "icon": "fa-solid fa-book"
   },
   {
-      "category": "bike",
-      "icon": "fa-thin fa-bicycle"
+      "category": "bicycle",
+      "icon": "fa-solid fa-bicycle"
   },
   {
       "category": "shirt",
-      "icon": "fa-thin fa-shirt"
+      "icon": "fa-solid fa-shirt"
   },
   {
-      "category": "kitchen set",
-      "icon": "fa-thin fa-kitchen-set"
+      "category": "laptop",
+      "icon": "fa-solid fa-laptop"
   },
   {
-      "category": "rug",
-      "icon": "fa-thin fa-rug"
+      "category": "guitar",
+      "icon": "fa-solid fa-guitar"
   },
   {
-      "category": "rolling suitcase",
-      "icon": "fa-thin fa-suitcase-rolling"
+      "category": "suitcase-suitcase",
+      "icon": "fa-solid fa-suitcase-rolling"
   },
   {
       "category": "leaf",
-      "icon": "fa-thin fa-leaf"
+      "icon": "fa-solid fa-leaf"
   },
   {
-      "category": "champagne glasses",
-      "icon": "fa-thin fa-champagne-glasses"
+      "category": "champagne-glasses",
+      "icon": "fa-solid fa-champagne-glasses"
   }
 ]
