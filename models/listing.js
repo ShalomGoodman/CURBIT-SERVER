@@ -15,6 +15,10 @@ const listingSchema = new Schema({
         lng: { type: String, required: true },
         lat: { type: String, required: true }
     },
+    dataUrl: {
+        type: String,
+        required: false
+    },
     isClaimed: { type: Boolean, required: true },
     createdAt: { type: Date, default: Date.now }
 })
