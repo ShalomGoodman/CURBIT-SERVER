@@ -12,4 +12,7 @@ app.delete('/listings/_:id', )
 app.post('/auth/signin', )
 app.post('/auth/signup', )
 app.get('/auth/isTokenValid', )
+<<<<<<< HEAD
 
+=======
+>>>>>>> 51e93a388a090433144841b64f0d74c54863f387

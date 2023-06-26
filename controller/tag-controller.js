@@ -1,10 +1,10 @@
-import Category from '../models/category.js';
+import Tags from '../models/tags.js'
 
 /*----- Get Routes -----*/
 
-//Get all Categories
-export function getAllCategories(req, res) {
-    Category.find({})
+//Get all Tags
+export function getAllTags(req, res) {
+    Tags.find({})
     .then((response) => {
         res.status(200).send(response);
     })
@@ -12,6 +12,3 @@ export function getAllCategories(req, res) {
         res.status(404).send({status: 404, error: err});
     })
 }
-
-
-
