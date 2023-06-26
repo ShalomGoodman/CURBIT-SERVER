@@ -1,0 +1,50 @@
+[
+  {
+      "category": "chair",
+      "icon": "fa-solid fa-chair"
+  },
+  {
+      "category": "couch",
+      "icon": "fa-solid fa-couch"
+  },
+  {
+      "category": "bed",
+      "icon": "fa-solid fa-bed"
+  },
+  {
+      "category": "tv",
+      "icon": "fa-solid fa-tv"
+  },
+  {
+      "category": "book",
+      "icon": "fa-solid fa-book"
+  },
+  {
+      "category": "bicycle",
+      "icon": "fa-solid fa-bicycle"
+  },
+  {
+      "category": "shirt",
+      "icon": "fa-solid fa-shirt"
+  },
+  {
+      "category": "laptop",
+      "icon": "fa-solid fa-laptop"
+  },
+  {
+      "category": "guitar",
+      "icon": "fa-solid fa-guitar"
+  },
+  {
+      "category": "suitcase-suitcase",
+      "icon": "fa-solid fa-suitcase-rolling"
+  },
+  {
+      "category": "leaf",
+      "icon": "fa-solid fa-leaf"
+  },
+  {
+      "category": "champagne-glasses",
+      "icon": "fa-solid fa-champagne-glasses"
+  }
+]

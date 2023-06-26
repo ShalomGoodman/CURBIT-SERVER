@@ -5,8 +5,12 @@ const Schema = mongoose.Schema
 
 const userSchema = new Schema({
     username: { type: String, required: true },
-    listings: { type: Array, required: false },
-    createdAt: { type: Date, required: true}
+	credentials: { type: String, required: true },
+    listings: [{
+        type: mongoose.Types.ObjectId,
+        ref: 'Listing'
+    }],
+    createdAt: { type: Date, default: Date.now}
 });
 
 const User = mongoose.model('User', userSchema);

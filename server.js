@@ -1,29 +1,42 @@
+/*----- Dependencies -----*/
 import express from 'express'
 import * as dotenv from 'dotenv'
 import cors from 'cors'
-// import categoryRoutes from './routes/category-routes.js'
-// import listingRoutes from './routes/listing-routes.js'
-// import userRoutes from './routes/user-routes.js'
-// import userloginRoutes from './routes/userlogin-routes.js'
-
-
-const app = express()
-      app.use(cors())
-      app.use(express.json())
-
+import jwt from 'jsonwebtoken'
+import bcrypt from 'bcrypt'
 import db from './db/connection.js'
+/*----- Imported Routes -----*/
+import { listingRoutes } from './routes/listing-routes.js'
+import { userRoutes } from './routes/user-routes.js'
+import { categoryRoutes } from './routes/category-routes.js'
+import { tagRoutes } from './routes/tag-routes.js'
+import { authRoutes } from './auth/auth.js'
+//import { imageRoutes } from './routes/image-routes.js'
+
+/*----- Middleware -----*/
+const app = express()
+app.use(cors())
+app.use(express.json())
+
+/*----- Connect to Database -----*/
 db.on('connected', async () => {
    console.log(`Connected to MongoDB ${db.name} at ${db.host}:${db.port}`)
 })
 
-//ENV Variables 
+/*----- ENV Variables -----*/ 
 dotenv.config()
-let PORT = process.env.PORT || 7500
+const PORT = process.env.PORT || 5550
+const SECRET = process.env.SECRET
 
+/*----- Routes -----*/
+listingRoutes(app)
+userRoutes(app, jwt, bcrypt, SECRET)
+categoryRoutes(app)
+tagRoutes(app)
+authRoutes(app)
+//imageRoutes(app)
 
-// app.use(categoryRoutes, listingRoutes, userRoutes, userloginRoutes)
-
-
+/*----- Server Listening -----*/
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-  });
+    console.log(`Server is running on port ${PORT}`)
+  })

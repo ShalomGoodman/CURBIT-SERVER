@@ -1,2 +1,6 @@
 node_modules
 .env
+.envTest
+.envTest2
+image.js
+image-routes.js
